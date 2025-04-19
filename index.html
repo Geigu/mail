@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Email Generator</h1>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Enter username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="Enter password" required>
-        </div>
-        <div class="form-group">
-            <label for="domain">Domain Extension:</label>
-            <input type="text" id="domain" placeholder="Enter domain (e.g., gmail.com)" required>
-        </div>
-        <button id="generate">Generate Email</button>
-        <div id="result"></div>
+        <input type="text" id="username" placeholder="Enter username (leave blank to generate)">
+        <input type="text" id="password" placeholder="Enter password">
+        <input type="text" id="domain" placeholder="Enter domain (e.g., gmail.com)">
+        <button id="generateButton">Generate Email</button>
+        <div id="result" class="result"></div>
+        <button id="copyButton" class="copy-button" style="display: none;" onclick="copyToClipboard()">Copy</button>
+        <button id="copyEmailButton" class="copy-button" style="display: none;" onclick="copyEmailToClipboard()">Copy Email</button>
+        <button id="copyPasswordButton" class="copy-button" style="display: none;" onclick="copyPasswordToClipboard()">Copy Password</button>
+        <button id="copyUsernameButton" class="copy-button" style="display: none;" onclick="copyUsernameToClipboard()">Copy Username</button>
     </div>
     <script src="script.js"></script>
 </body>
